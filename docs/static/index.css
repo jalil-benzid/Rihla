@@ -24,6 +24,7 @@
     padding: 0;
     margin : 0;
     box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
 }
 
 img{
@@ -1544,8 +1545,21 @@ h1 , h3{
 .why .coose .chose{
     display : flex;
     flex-direction : column;
-    width : 128px;
-    height : 300px;
+    width: 20%;
+    height: 300px;
+    padding-inline: 1em;
+    padding-block: 1em;
+    border: 1px solid #f0f0f0;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.why .coose .chose:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+    border-color: #e0e0e0;
 }
 
 .why .coose .chose i{
@@ -1561,4 +1575,118 @@ h1 , h3{
 
 .why .coose .chose p{
     font-size : 0.9em;
+    opacity: 0.8;
+
 }
+
+@media (width < 700px) {
+    main{
+        display: none !important;
+    }
+
+    .div-ex{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .div-ex .j{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .div-ex .j .things{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        width: 100%;
+        margin: auto;
+    }
+
+        .div-ex .things h1{
+            display: none;
+        }
+
+            .div-ex .things button{
+                display: none;
+            }
+
+    .div-ex .j .things .icons{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        gap: 16px;
+        margin: auto;
+        margin-bottom: 2em;
+        display: none;
+    }
+
+    .div-ex .j .things .icons .icon{
+        width: 40%;
+        height: 80px;
+    }
+
+    .div-ex .j img{
+        width: 100%;
+    }
+
+    .why{
+        display: none;
+    }
+
+    .links-to-things{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .try{
+        text-align: center;
+    }
+}
+
+/* @media (width<450px) {
+        .why{
+        height: fit-content;
+        display: flex;
+        flex-direction: column !important;
+        align-items: center;
+        margin-bottom: 20em;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .why h1{
+        font-size: 1.4em;
+        white-space: nowrap;
+    }
+
+    .coose{
+        /* display: none; */
+        /*
+        display: flex;
+        flex-direction: column !important;
+        align-items: center;
+        width: 80% !important;
+
+    }
+
+    .why .coose .chose{
+        display: flex;
+        flex-direction: column !important;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 2.5em;
+        width: 280px !important;
+    }
+
+    .chose i{
+        margin-bottom: 0.4em !important;
+    }
+
+} */
+ 
